@@ -1,14 +1,16 @@
 package singleton;
 
+import java.lang.runtime.ObjectMethods;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
-public class AgendaSingletonEAGER {
+public class AgendaSingletonLAZY {
 
-    public static final AgendaSingletonEAGER INSTANCE = new AgendaSingletonEAGER();
+    public static AgendaSingletonLAZY INSTANCE = null;
     private Map<String,Boolean> diasDisponiveis = new HashMap<>();
 
-    public AgendaSingletonEAGER(){
+    public AgendaSingletonLAZY(){
         diasDisponiveis.put("Segunda",true);
         diasDisponiveis.put("Terca",true);
         diasDisponiveis.put("Quarta",true);
@@ -22,10 +24,13 @@ public class AgendaSingletonEAGER {
         return diasDisponiveis;
     }
 
-    public static AgendaSingletonEAGER getInstance(){
+    public static AgendaSingletonLAZY getInstance(){
+        if(Objects.isNull(INSTANCE)){
+            INSTANCE = new AgendaSingletonLAZY();
+        }
         return INSTANCE;
     }
     public void ocupa(String dia){
-        INSTANCE.diasDisponiveis.replace(dia,false);
+        diasDisponiveis.replace(dia,false);
     }
 }

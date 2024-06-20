@@ -1,16 +1,16 @@
 package singleton;
 
-import java.lang.runtime.ObjectMethods;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class AgendaSingletonLAZY {
+public enum AgendaSingletonENUM {
 
-    public static AgendaSingletonLAZY INSTANCE = null;
+    INSTANCE;
+
     private Map<String,Boolean> diasDisponiveis = new HashMap<>();
 
-    public AgendaSingletonLAZY(){
+    private AgendaSingletonENUM(){
         diasDisponiveis.put("Segunda",true);
         diasDisponiveis.put("Terca",true);
         diasDisponiveis.put("Quarta",true);
@@ -24,10 +24,7 @@ public class AgendaSingletonLAZY {
         return diasDisponiveis;
     }
 
-    public static AgendaSingletonLAZY getInstance(){
-        if(Objects.isNull(INSTANCE)){
-            INSTANCE = new AgendaSingletonLAZY();
-        }
+    public static AgendaSingletonENUM getInstance(){
         return INSTANCE;
     }
     public void ocupa(String dia){

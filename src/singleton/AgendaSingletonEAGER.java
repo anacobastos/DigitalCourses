@@ -3,11 +3,12 @@ package singleton;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Agenda {
+public class AgendaSingletonEAGER {
 
+    public static final AgendaSingletonEAGER INSTANCE = new AgendaSingletonEAGER();
     private Map<String,Boolean> diasDisponiveis = new HashMap<>();
 
-    public Agenda(){
+    public AgendaSingletonEAGER(){
         diasDisponiveis.put("Segunda",true);
         diasDisponiveis.put("Terca",true);
         diasDisponiveis.put("Quarta",true);
@@ -21,7 +22,9 @@ public class Agenda {
         return diasDisponiveis;
     }
 
-
+    public static AgendaSingletonEAGER getInstance(){
+        return INSTANCE;
+    }
     public void ocupa(String dia){
         diasDisponiveis.replace(dia,false);
     }

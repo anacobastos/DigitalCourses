@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8823b66f-245b-4421-86c0-c1c9f47e85e3" name="Changes" comment="">
+    <list default="true" id="8823b66f-245b-4421-86c0-c1c9f47e85e3" name="Changes" comment="&quot;Animal with lombok&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/singleton/Agenda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/singleton/AgendaSingletonEAGER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/singleton/AgendaSingletonENUM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/singleton/AgendaSingletonLAZY.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesingPatterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DesingPatterns.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Builder/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builder/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Builder/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builder/Pessoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builder/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/builder/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builder/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/builder/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryMethod/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factoryMethod/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryMethod/ProdutoDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factoryMethod/ProdutoDigital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryMethod/ProdutoFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factoryMethod/ProdutoFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factoryMethod/TipoProdutoEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factoryMethod/TipoProdutoEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +50,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2i9FZ24tDVCJ1dr8LpyrUSQ8aen" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,6 +73,11 @@
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="singleton" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,6 +87,23 @@
       <option name="presentableId" value="Default" />
       <updated>1718894937837</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;Animal with lombok&quot;">
+      <option name="closed" value="true" />
+      <created>1718896770780</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718896770780</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;Animal with lombok&quot;">
+      <option name="closed" value="true" />
+      <created>1718896792253</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718896792253</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,5 +116,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Animal with lombok&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Animal with lombok&quot;" />
   </component>
 </project>
