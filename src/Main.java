@@ -3,6 +3,9 @@ import builder.Pessoa;
 import factoryMethod.Produto;
 import factoryMethod.ProdutoFactory;
 import factoryMethod.TipoProdutoEnum;
+import prototype.Botao;
+import prototype.BotaoRegistry;
+import prototype.TipoBordaEnum;
 import singleton.Agenda;
 import singleton.AgendaSingletonEAGER;
 import singleton.AgendaSingletonENUM;
@@ -16,10 +19,29 @@ public class Main {
     public static void main(String[] args) {
         //builder();
         //factory();
-        singleton();
-
+        //singleton();
+        prototype();
     }
+    public static void prototype(){
+        Botao botao1 = BotaoRegistry.getBotao("BOTAO_VERMELHO");
+        System.out.println(botao1);
+        Botao botao2 = BotaoRegistry.getBotao("BOTAO_VERMELHO");
+        botao2.setCor("LARANJA");
+        System.out.println(botao2);
+        System.out.println(botao1);
 
+        System.out.println(BotaoRegistry.getBotao("BOTAO_AMARELO"));
+        System.out.println(BotaoRegistry.getBotao("BOTAO_AZUL"));
+
+        Botao botaoPreto = new Botao();
+        botaoPreto.setCor("Preto");
+        botaoPreto.setAltura("100");
+        botaoPreto.setLargura("200");
+        botaoPreto.setTipoBordaEnum(TipoBordaEnum.DUPLA);
+
+        BotaoRegistry.addBotao("BOTAO_PRETO",botaoPreto);
+        System.out.println(BotaoRegistry.getBotao("BOTAO_PRETO"));
+    }
     public static void builder(){
         ///////////////// BUILDER
         Pessoa novaPessoa = new Pessoa.PessoaBuilder()
