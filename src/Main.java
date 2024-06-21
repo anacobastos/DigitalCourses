@@ -6,6 +6,10 @@ import factoryMethod.*;
 import prototype.*;
 import singleton.*;
 import strategy.*;
+import templateMethod.ReparaVeiculoComumService;
+import templateMethod.ReparaVeiculoLuxoService;
+import templateMethod.ReparaVeiculoService;
+import templateMethod.VeiculoParaReparo;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -21,8 +25,28 @@ public class Main {
         //proxy();
         //adapter();
         //strategy();
-        chainOfResponsability();
+        //chainOfResponsability();
+        templateMethod();
 
+    }
+
+    public static void templateMethod(){
+        System.out.println("%%%%%%%%%%%%%%%%%%% TEMPLATE %%%%%%%%%%%%%%%%%");
+        System.out.println("---------- LUXO -------------");
+        VeiculoParaReparo veiculoDeLuxo = new VeiculoParaReparo();
+        veiculoDeLuxo.setPorcentagemDanos(51);
+
+        ReparaVeiculoService rpl = new ReparaVeiculoLuxoService(veiculoDeLuxo);
+
+        rpl.reparaVeiculo();
+        System.out.println("---------- COMUM -------------");
+
+        VeiculoParaReparo veiculoComum = new VeiculoParaReparo();
+        veiculoComum.setPorcentagemDanos(71);
+
+        ReparaVeiculoService rpc = new ReparaVeiculoComumService(veiculoComum);
+
+        rpc.reparaVeiculo();
     }
     public static void chainOfResponsability(){
         System.out.println("%%%%%%%%%%%%%%%%% CHAIN OF RESPONSABILITY %%%%%%%%%%%%%%%%");
