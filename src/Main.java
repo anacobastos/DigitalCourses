@@ -1,3 +1,9 @@
+import adapter.ClienteOperacoes;
+import adapter.JarConta;
+import adapter.JarContaAdapter;
+import proxy.PessoaRepository;
+import proxy.PessoaRepositoryProxy;
+import proxy.PessoaService;
 import builder.Animal;
 import builder.Pessoa;
 import factoryMethod.Produto;
@@ -11,7 +17,10 @@ import singleton.AgendaSingletonEAGER;
 import singleton.AgendaSingletonENUM;
 import singleton.AgendaSingletonLAZY;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+
+import static proxy.PessoaService.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -20,9 +29,44 @@ public class Main {
         //builder();
         //factory();
         //singleton();
-        prototype();
+        //prototype();
+        //proxy();
+        //adapter();
+
     }
+
+    public static void adapter(){
+        System.out.println("%%%%%%%%%%%%%%%%% ADAPTER %%%%%%%%%%%%%%");
+        JarConta jarConta = new JarConta();
+        JarContaAdapter jarContaAdapter = new JarContaAdapter(jarConta);
+        ClienteOperacoes clienteOperacoes = new ClienteOperacoes(jarContaAdapter);
+
+        clienteOperacoes.deposita(new BigDecimal(500));
+        clienteOperacoes.saca(new BigDecimal(500));
+    }
+
+    public static void proxy(){
+        System.out.println("%%%%%%%%%%%%%%% PROXY %%%%%%%%%%%%%%%%");
+        PessoaRepositoryProxy repositoryProxy = new PessoaRepositoryProxy();
+        PessoaService pessoaService = new PessoaService(repositoryProxy);
+        Pessoa novaPessoa = new Pessoa.PessoaBuilder()
+                .apelido("Carol")
+                .nome("Ana Caroline")
+                .sobrenome("Bastos")
+                .email("anacaroline.bastos@outlook.com")
+                .dataDeNascimento(LocalDate.of(1997,07,06))
+                .build();
+
+        repositoryProxy.save(novaPessoa);
+
+        Pessoa pessoaRetornada = repositoryProxy.findById(1L);
+        System.out.println(pessoaRetornada);
+        Pessoa pessoaRetornada2 = repositoryProxy.findById(1L);
+        System.out.println(pessoaRetornada2);
+    }
+
     public static void prototype(){
+        System.out.println("%%%%%%%%%%%%%%%%% PROTOTYPE %%%%%%%%%%%%%%%%");
         Botao botao1 = BotaoRegistry.getBotao("BOTAO_VERMELHO");
         System.out.println(botao1);
         Botao botao2 = BotaoRegistry.getBotao("BOTAO_VERMELHO");
@@ -42,8 +86,10 @@ public class Main {
         BotaoRegistry.addBotao("BOTAO_PRETO",botaoPreto);
         System.out.println(BotaoRegistry.getBotao("BOTAO_PRETO"));
     }
+
     public static void builder(){
-        ///////////////// BUILDER
+
+        System.out.println("%%%%%%%%%%%%%%%%% BUILDER %%%%%%%%%%%%%%%%");
         Pessoa novaPessoa = new Pessoa.PessoaBuilder()
                 .apelido("Carol")
                 .nome("Ana Caroline")
@@ -64,7 +110,8 @@ public class Main {
     }
 
     public static void factory(){
-        //////////////// FACTORY
+
+        System.out.println("%%%%%%%%%%%%%%%%% FACTORY %%%%%%%%%%%%%%%%");
         Produto produto1 = ProdutoFactory.getInstance(TipoProdutoEnum.FISICO);
         Produto produto2 = ProdutoFactory.getInstance(TipoProdutoEnum.DIGITAL);
         System.out.println(produto1);
@@ -72,7 +119,8 @@ public class Main {
     }
 
     public static void singleton(){
-        //////////////// SINGLETON
+
+        System.out.println("%%%%%%%%%%%%%%%%% SINGLETON %%%%%%%%%%%%%%%%");
         System.out.println("%%%%%%%%%%%%%%% SEM SINGLETON %%%%%%%%%%");
         System.out.println(reservaDia("Sabado"));
         System.out.println(reservaDia("Sexta"));
@@ -107,7 +155,6 @@ public class Main {
         System.out.println(agenda.getDiasDisponiveis());
         return agenda;
     }
-
     private static AgendaSingletonENUM reservaDiasSingletonEnum(String dia){
         AgendaSingletonENUM agenda = AgendaSingletonENUM.getInstance();
         agenda.ocupa(dia);

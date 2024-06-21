@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8823b66f-245b-4421-86c0-c1c9f47e85e3" name="Changes" comment="&quot;Animal with lombok&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/singleton/Agenda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/singleton/AgendaSingletonEAGER.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/singleton/AgendaSingletonENUM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/singleton/AgendaSingletonLAZY.java" afterDir="false" />
+    <list default="true" id="8823b66f-245b-4421-86c0-c1c9f47e85e3" name="Changes" comment="&quot;Updated main to include singleton&quot;">
+      <change afterPath="$PROJECT_DIR$/src/adapter/ClienteOperacoes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/adapter/JarConta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/adapter/JarContaAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proxy/PessoaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proxy/PessoaRepositoryProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proxy/PessoaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builder/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/builder/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builder/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/builder/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factoryMethod/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factoryMethod/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factoryMethod/ProdutoDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factoryMethod/ProdutoDigital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factoryMethod/ProdutoFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factoryMethod/ProdutoFisico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factoryMethod/TipoProdutoEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factoryMethod/TipoProdutoEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prototype/Botao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prototype/Botao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prototype/BotaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prototype/BotaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prototype/BotaoRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prototype/BotaoRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prototype/TipoBordaEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prototype/TipoBordaEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,24 +56,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "DesingPatterns",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/anaca/Documents/Meus codigos/DesingPatterns/src/Main.java",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DesingPatterns&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/anaca/Documents/Meus codigos/DesingPatterns/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Proxy" />
+      <recent name="prototype" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="proxy" />
       <recent name="singleton" />
     </key>
   </component>
@@ -103,7 +107,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718896792253</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;Updated main to include singleton&quot;">
+      <option name="closed" value="true" />
+      <created>1718913426228</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718913426228</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;Updated main to include singleton&quot;">
+      <option name="closed" value="true" />
+      <created>1718913459983</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718913459983</updated>
+    </task>
+    <task id="LOCAL-00005" summary="&quot;Updated main to include singleton&quot;">
+      <option name="closed" value="true" />
+      <created>1718921251016</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718921251016</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +147,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Animal with lombok&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Animal with lombok&quot;" />
+    <MESSAGE value="&quot;Updated main to include singleton&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Updated main to include singleton&quot;" />
   </component>
 </project>

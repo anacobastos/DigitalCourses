@@ -1,2 +1,8 @@
-package prototype;public class TipoBordaEnum {
+package prototype;
+
+public enum TipoBordaEnum {
+    FINA,
+    GROSSA,
+    PONTILHADA,
+    DUPLA;
 }
