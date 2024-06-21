@@ -16,6 +16,7 @@ import singleton.Agenda;
 import singleton.AgendaSingletonEAGER;
 import singleton.AgendaSingletonENUM;
 import singleton.AgendaSingletonLAZY;
+import strategy.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -32,6 +33,31 @@ public class Main {
         //prototype();
         //proxy();
         //adapter();
+
+        Funcionario funcionario1 = new Funcionario();
+        funcionario1.setNome("Joao");
+        funcionario1.setSalario(new BigDecimal(1000));
+        funcionario1.setTipoContratacao(TipoContratacaoEnum.CLT);
+
+        Funcionario funcionario2 = new Funcionario();
+        funcionario2.setNome("Pedro");
+        funcionario2.setSalario(new BigDecimal(1000));
+        funcionario2.setTipoContratacao(TipoContratacaoEnum.PJ);
+
+        Funcionario funcionario3 = new Funcionario();
+        funcionario3.setNome("Carlos");
+        funcionario3.setSalario(new BigDecimal(1000));
+        funcionario3.setTipoContratacao(TipoContratacaoEnum.ESTAGIO);
+
+        ReajusteAnualSalario reajuste = new ReajusteAnualSalario();
+
+        reajuste.calculaReajusteAnual(funcionario1, new CalculadoraReajusteAnualSalarioCLT());
+        reajuste.calculaReajusteAnual(funcionario2, new CalculadoraReajusteAnualSalarioPJ());
+        reajuste.calculaReajusteAnual(funcionario3, new CalculadoraReajusteAnualSalarioEstagio());
+
+        System.out.println(funcionario1);
+        System.out.println(funcionario2);
+        System.out.println(funcionario3);
 
     }
 

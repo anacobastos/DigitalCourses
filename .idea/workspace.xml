@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8823b66f-245b-4421-86c0-c1c9f47e85e3" name="Changes" comment="&quot;Updated main to include singleton&quot;">
-      <change afterPath="$PROJECT_DIR$/src/adapter/ClienteOperacoes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/adapter/JarConta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/adapter/JarContaAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proxy/PessoaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proxy/PessoaRepositoryProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proxy/PessoaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/CalculadoraReajusteAnualSalario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/CalculadoraReajusteAnualSalarioCLT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/CalculadoraReajusteAnualSalarioEstagio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/CalculadoraReajusteAnualSalarioPJ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/Funcionario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/ReajusteAnualSalario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/TipoContratacaoEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prototype/Botao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prototype/Botao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prototype/BotaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prototype/BotaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prototype/BotaoRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prototype/BotaoRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prototype/TipoBordaEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prototype/TipoBordaEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +23,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -74,10 +73,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="strategy" />
       <recent name="Proxy" />
       <recent name="prototype" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="strategy" />
       <recent name="proxy" />
       <recent name="singleton" />
     </key>
