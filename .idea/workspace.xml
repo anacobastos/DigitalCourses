@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8823b66f-245b-4421-86c0-c1c9f47e85e3" name="Changes" comment="&quot;Updated main to include singleton&quot;">
-      <change afterPath="$PROJECT_DIR$/src/strategy/CalculadoraReajusteAnualSalario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/CalculadoraReajusteAnualSalarioCLT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/CalculadoraReajusteAnualSalarioEstagio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/CalculadoraReajusteAnualSalarioPJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/Funcionario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/ReajusteAnualSalario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/TipoContratacaoEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/Carro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/DescontoCarro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/DescontoCarroFIAT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/DescontoCarroFORD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/DescontoCarroValorMaiorQueCemMil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/Marca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/SemDireitoADesconto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/VendaCarroService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsabiliy/VendaCarroServiceComChain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -73,11 +75,13 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="chainOfResponsabiliy" />
       <recent name="strategy" />
       <recent name="Proxy" />
       <recent name="prototype" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="chainOfResponsabiliy" />
       <recent name="strategy" />
       <recent name="proxy" />
       <recent name="singleton" />

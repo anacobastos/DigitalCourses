@@ -1,27 +1,14 @@
-import adapter.ClienteOperacoes;
-import adapter.JarConta;
-import adapter.JarContaAdapter;
-import proxy.PessoaRepository;
-import proxy.PessoaRepositoryProxy;
-import proxy.PessoaService;
-import builder.Animal;
-import builder.Pessoa;
-import factoryMethod.Produto;
-import factoryMethod.ProdutoFactory;
-import factoryMethod.TipoProdutoEnum;
-import prototype.Botao;
-import prototype.BotaoRegistry;
-import prototype.TipoBordaEnum;
-import singleton.Agenda;
-import singleton.AgendaSingletonEAGER;
-import singleton.AgendaSingletonENUM;
-import singleton.AgendaSingletonLAZY;
+import adapter.*;
+import chainOfResponsabiliy.*;
+import proxy.*;
+import builder.*;
+import factoryMethod.*;
+import prototype.*;
+import singleton.*;
 import strategy.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
-import static proxy.PessoaService.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -33,6 +20,50 @@ public class Main {
         //prototype();
         //proxy();
         //adapter();
+        //strategy();
+        chainOfResponsability();
+
+    }
+    public static void chainOfResponsability(){
+        System.out.println("%%%%%%%%%%%%%%%%% CHAIN OF RESPONSABILITY %%%%%%%%%%%%%%%%");
+        //VendaCarroService vendaCarroService = new VendaCarroService();
+        VendaCarroServiceComChain vendaCarroService = new VendaCarroServiceComChain();
+        Carro carro1 = new Carro();
+        carro1.setMarca(Marca.FORD);
+        carro1.setModelo("Fusion");
+        carro1.setPreco(new BigDecimal(60000));
+        BigDecimal valorVenda1 = vendaCarroService.calculaValorVenda(carro1);
+        System.out.println("Valor de venda "+carro1.getModelo()+" : R$"+carro1.getPreco());
+        System.out.println("Valor de venda "+carro1.getModelo()+" com desconto: R$"+ valorVenda1);
+
+        Carro carro2 = new Carro();
+        carro2.setMarca(Marca.FIAT);
+        carro2.setModelo("Uno");
+        carro2.setPreco(new BigDecimal(40000));
+        BigDecimal valorVenda2 = vendaCarroService.calculaValorVenda(carro2);
+        System.out.println("Valor de venda "+carro2.getModelo()+" : R$"+carro2.getPreco());
+        System.out.println("Valor de venda "+carro2.getModelo()+" com desconto: R$"+ valorVenda2);
+
+        Carro carro3 = new Carro();
+        carro3.setMarca(Marca.CHEVROLET);
+        carro3.setModelo("Camaro");
+        carro3.setPreco(new BigDecimal(100000));
+        BigDecimal valorVenda3 = vendaCarroService.calculaValorVenda(carro3);
+        System.out.println("Valor de venda "+ carro3.getModelo()+" : R$"+ carro3.getPreco());
+        System.out.println("Valor de venda "+ carro3.getModelo()+" com desconto: R$"+ valorVenda3);
+
+
+        Carro carro4 = new Carro();
+        carro4.setMarca(Marca.GOL);
+        carro4.setModelo("Gol bolinha");
+        carro4.setPreco(new BigDecimal(50000));
+        BigDecimal valorVenda4 = vendaCarroService.calculaValorVenda(carro4);
+        System.out.println("Valor de venda "+ carro4.getModelo()+" : R$"+ carro4.getPreco());
+        System.out.println("Valor de venda "+ carro4.getModelo()+" com desconto: R$"+ valorVenda4);
+    }
+
+    public static void strategy(){
+        System.out.println("%%%%%%%%%%%%%%%%%%%%% STRATEGY %%%%%%%%%%%%%");
 
         Funcionario funcionario1 = new Funcionario();
         funcionario1.setNome("Joao");
